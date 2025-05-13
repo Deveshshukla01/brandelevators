@@ -26,7 +26,7 @@ export const MockupScreen = () => {
       <div className="relative z-0 grid h-full w-full grid-cols-[100px,_1fr] overflow-hidden rounded-t-lg bg-white md:grid-cols-[150px,_1fr]">
         <div className="h-full border-r border-zinc-300 p-2">
           {/* <LogoSmall /> */}
-          <img src="/logo.png" alt="Logo" className="h-10 w-auto" />
+          <img src="/Logo.png" alt="Logo" className="h-10 w-auto" />
 
           <div className="mt-3 space-y-1.5">
             <span className="flex items-center gap-1.5 text-xs text-indigo-600">

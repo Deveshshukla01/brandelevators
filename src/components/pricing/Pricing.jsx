@@ -13,16 +13,16 @@ export const Pricing = () => {
       <Toggle selected={selected} setSelected={setSelected} />
       <div className="mt-6 grid grid-cols-1 gap-6 lg:mt-12 lg:grid-cols-3 lg:gap-8">
         <PriceColumn
-          title="Individuals"
-          price="0"
+          title="Basic package"
+          price="4,999"
           statement="For individuals looking to up their productivity gains. Free forever."
           items={[
             {
-              children: "1 Team Member",
+              children: "4 static posts",
               checked: true,
             },
             {
-              children: "3 Boards",
+              children: "4 carousel posts",
               checked: true,
             },
             {
@@ -30,82 +30,60 @@ export const Pricing = () => {
               checked: true,
             },
             {
-              children: "Upgraded Support",
-              checked: false,
-            },
-            {
-              children: "Custom Branding",
-              checked: false,
-            },
-            {
-              children: "Self Host",
-              checked: false,
-            },
+              children: "shot with professional camera",
+              checked: true,
+            }
+          
           ]}
         />
         <PriceColumn
-          title="Teams"
-          price={selected === "monthly" ? "12" : "8"}
+          title="Standard Package"
+          price={selected === "monthly" ? "7,999" : "-NA"}
           statement="For teams looking to scale their team efficiently. Stay on track."
           highlight
           items={[
             {
-              children: "∞ Team Members",
+              children: "8 static posts",
               checked: true,
             },
             {
-              children: "∞ Boards",
+              children: "8 caraousel posts",
               checked: true,
             },
             {
-              children: "∞ Workflows",
+              children: "4 reels",
               checked: true,
             },
+            {
+              children: "shot with professional camera",
+              checked: true,
+            }
 
-            {
-              children: "Upgraded Support",
-              checked: true,
-            },
-            {
-              children: "Custom Branding",
-              checked: false,
-            },
-            {
-              children: "Self Host",
-              checked: false,
-            },
+         
           ]}
         />
         <PriceColumn
-          title="Enterprise"
-          price={selected === "monthly" ? "24" : "16"}
+          title="Premium Package"
+          price={selected === "monthly" ? "11,999" : "-NA"}
           statement="For enterprises looking to see new heights. Manage without the stress"
           items={[
             {
-              children: "∞ Team Members",
+              children: "12 static package",
               checked: true,
             },
             {
-              children: "∞ Boards",
+              children: "12 carousel package",
               checked: true,
             },
             {
-              children: "∞ Workflows",
+              children: "6 reels",
               checked: true,
             },
+            {
+              children: "shot with professional camera",
+              checked: true,
+            }
 
-            {
-              children: "Enterprise Support",
-              checked: true,
-            },
-            {
-              children: "Custom Branding",
-              checked: true,
-            },
-            {
-              children: "Self Host",
-              checked: true,
-            },
           ]}
         />
       </div>
@@ -150,7 +128,7 @@ const PriceColumn = ({ highlight, title, price, statement, items }) => {
             }}
             className="block text-6xl font-bold"
           >
-            ${price}
+            Rs{price}
           </motion.span>
         </AnimatePresence>
         <motion.div layout className="font-medium text-zinc-600">
